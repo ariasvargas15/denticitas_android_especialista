@@ -1,0 +1,119 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Denticitas_android" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/White</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/White</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="Theme.Denticitas_android.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Denticitas_android.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Denticitas_android.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Tema del texto del header del dashboard-->
+    <style name="NameTextHeaderDrawer">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <!--Tema del navigation-->
+    <style name="NavigationView" parent="Theme.Denticitas_android">
+        <item name="android:background">@color/White</item>
+        <item name="itemIconTint">@color/MidnightBlue</item>
+        <item name="itemTextColor">@color/MidnightBlue</item>
+    </style>
+
+    <style name="LoginTitle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="RegisterTitle">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="LoginText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="InputTextWhite" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">25dp</item>
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="hintTextColor">@color/Gray</item>
+        <item name="android:textColorHint">@color/Gray</item>
+        <item name="startIconTint">@color/Gray</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="InputEditTextWhite">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="InputPasswordWhite" parent="InputTextWhite">
+        <item name="passwordToggleEnabled">true</item>
+        <item name="passwordToggleTint">@color/Gray</item>
+    </style>
+
+    <style name="InputEditPasswordWhite" parent="InputEditTextWhite">
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:textColor">@color/White</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="rippleColor">@color/White</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Fingerprint">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="tint">@color/Gray</item>
+    </style>
+
+    <style name="RegistrateText" parent="LoginText">
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ConfirmarText">
+        <item name="android:layout_gravity">end</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">25dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/vector_dashboard"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:clickable="true">
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/nav_header_margin"
+        android:layout_marginBottom="@dimen/nav_header_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/name_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/nav_header_space_text_icon">
+            <TextView
+                style="@style/NameTextHeaderDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_customer"
+                android:layout_marginEnd="@dimen/nav_header_space_text_icon"/>
+            <ImageView
+                android:layout_width="@dimen/nav_header_icon_size"
+                android:layout_height="@dimen/nav_header_icon_size"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/White"/>
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/nav_header_image_size"
+            android:layout_height="@dimen/nav_header_image_size"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_profile"/>
+    </LinearLayout>
+</RelativeLayout>
