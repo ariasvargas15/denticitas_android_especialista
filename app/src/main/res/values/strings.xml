@@ -57,4 +57,6 @@
     <string name="menu_profile">Perfil</string>
     <string name="modify_button">Modificar</string>
     <string name="mis_citas">Mis citas</string>
+    <string name="historias_cl_nicas">Historias clínicas</string>
+    <string name="eliminar_agenda">eliminar agenda</string>
 </resources>

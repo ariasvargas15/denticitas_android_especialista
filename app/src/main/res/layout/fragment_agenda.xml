@@ -19,8 +19,8 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,9 +51,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_fecha"
                     style="@style/InputEditTextWhite"
+                    android:focusableInTouchMode="false"
                     android:importantForAutofill="no"
-                    android:inputType="date"
-                    android:focusableInTouchMode="false"/>
+                    android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -65,12 +65,19 @@
                 android:startYear="2020" />-->
 
             <TextView
-                style="@style/ConfirmarText"
                 android:id="@+id/confirmar_fecha"
+                style="@style/ConfirmarText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/confirmar_fecha"
-                />
+                android:text="@string/confirmar_fecha" />
+
+            <TextView
+                android:id="@+id/eliminar_agenda"
+                style="@style/ConfirmarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eliminar_agenda"
+                android:textColor="@color/Red" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

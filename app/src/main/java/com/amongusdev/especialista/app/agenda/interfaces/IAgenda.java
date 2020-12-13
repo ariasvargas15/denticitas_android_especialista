@@ -9,6 +9,8 @@ public interface IAgenda {
 
         void setAgendas(ArrayList<Agenda> agendas);
 
+        void showResponseDelete(boolean success);
+
     }
 
     interface Presenter {
@@ -17,11 +19,17 @@ public interface IAgenda {
 
         void setAgendas(ArrayList<Agenda> agendas);
 
+        void showResponseDelete(boolean success);
+
+        void deleteAgenda(String cedula);
+
     }
 
     interface Interactor {
 
         void getAgendas(String cedula);
+
+        void deleteAgenda(String cedula);
 
     }
 }

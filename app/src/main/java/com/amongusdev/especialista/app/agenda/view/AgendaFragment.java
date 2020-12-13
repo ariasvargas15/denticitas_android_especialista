@@ -55,6 +55,7 @@ public class AgendaFragment extends Fragment implements IAgenda.View, DatePicker
     ArrayList<Agenda> agenda;
     DiaAgenda diaAgenda;
     AlertDialog dialog;
+    String cedula;
     public AgendaFragment() {
         // Required empty public constructor
     }
@@ -77,7 +78,7 @@ public class AgendaFragment extends Fragment implements IAgenda.View, DatePicker
         sp.setContext(getContext()).setCancelable(false).setMessage("Loading...");
         dialog = sp.build();
         dialog.show();
-        String cedula = Utils.getValuePreference(getContext(), "auth");
+        cedula = Utils.getValuePreference(getContext(), "auth");
         presenter.getAgendas(cedula);
         return v;
     }
@@ -97,6 +98,11 @@ public class AgendaFragment extends Fragment implements IAgenda.View, DatePicker
         navController.navigate(R.id.action_nav_agendar_to_nav_turno, b);
     }
 
+    @OnClick(R.id.eliminar_agenda)
+    public void eliminarAgemda(){
+        presenter.deleteAgenda(cedula);
+    }
+
 
     @Override
     public void setAgendas(ArrayList<Agenda> agendas) {
@@ -113,6 +119,16 @@ public class AgendaFragment extends Fragment implements IAgenda.View, DatePicker
             Snackbar.make(linear, "No tiene trunos programados", Snackbar.LENGTH_LONG).show();
         }
         dialog.dismiss();
+    }
+
+    @Override
+    public void showResponseDelete(boolean success) {
+        if (success){
+            Snackbar.make(linear, "Agenda eliminada correctamente", Snackbar.LENGTH_SHORT).show();
+            presenter.getAgendas(cedula);
+        } else {
+            Snackbar.make(linear, "Error al eliminar agenda", Snackbar.LENGTH_SHORT).show();
+        }
     }
 
     private Calendar setDate(int year, int month, int day){

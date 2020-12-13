@@ -44,8 +44,9 @@ public class TurnoAdapter extends RecyclerView.Adapter<TurnoAdapter.TurnoViewHol
         String h = Utils.convert24HourToAmPm(turno.getHoraInicio());
         holder.hora.setText(h);
 
-        String text = turno.getDisponible() ? "Libre" : "Agendado";
-        int color = turno.getDisponible() ?  R.color.colorPrimary : R.color.DarkGray;
+
+        String text = turno.getTiempoDisponible() < 120 ? "Libre" : "Agendado";
+        int color = turno.getTiempoDisponible() < 120 ?  R.color.colorPrimary : R.color.DarkGray;
 
         holder.estado.setText(text);
         holder.estado.setBackgroundColor(context.getResources().getColor(color, context.getTheme()));

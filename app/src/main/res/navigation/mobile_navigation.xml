@@ -58,4 +58,9 @@
         android:name="com.amongusdev.especialista.app.citas.view.EvolucionFragment"
         tools:layout="@layout/fragment_evolucion" />
 
+    <fragment
+        android:id="@+id/nav_historia"
+        android:name="com.amongusdev.especialista.app.historia.view.HistoriasFragment"
+        tools:layout="@layout/fragment_historias"/>
+
 </navigation>

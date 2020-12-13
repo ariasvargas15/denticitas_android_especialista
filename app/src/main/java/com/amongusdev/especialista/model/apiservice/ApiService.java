@@ -9,6 +9,7 @@ import com.amongusdev.especialista.model.apiservice.bodies.LoginBody;
 import com.amongusdev.especialista.model.entities.Agenda;
 import com.amongusdev.especialista.model.entities.Cita;
 import com.amongusdev.especialista.model.entities.Especialista;
+import com.amongusdev.especialista.model.entities.Evolucion;
 import com.amongusdev.especialista.model.entities.Servicio;
 
 import java.util.Calendar;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
@@ -64,7 +66,11 @@ public interface ApiService {
     @POST("historiaclinica/{cedula}/evolucion")
     Call<GenericResponse> setEvolucion(@Path("cedula") String cedula, @Body EvolucionBody evolucionBody);
 
+    @GET("historiaclinica/{cedula}/evolucion")
+    Call<List<Evolucion>> getEvolucion(@Path("cedula") String cedula);
 
+    @DELETE("agenda/{cedula}")
+    Call<GenericResponse> deleteAgenda(@Path("cedula") String cedula);
 
 
 
