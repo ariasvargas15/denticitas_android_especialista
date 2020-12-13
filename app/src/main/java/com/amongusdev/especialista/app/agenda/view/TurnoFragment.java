@@ -21,8 +21,10 @@ import com.amongusdev.especialista.app.agenda.adapter.TurnoAdapter;
 import com.amongusdev.especialista.app.agenda.interfaces.OnClickListenerRegistro;
 import com.amongusdev.especialista.model.entities.DiaAgenda;
 import com.amongusdev.especialista.model.entities.Turno;
+import com.amongusdev.especialista.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +45,7 @@ public class TurnoFragment extends Fragment implements OnClickListenerRegistro {
     private DiaAgenda diaAgenda;
     AlertDialog dialog;
     NavController navController;
+    Calendar myCalendar;
 
     public TurnoFragment() {
         // Required empty public constructor
@@ -53,6 +56,7 @@ public class TurnoFragment extends Fragment implements OnClickListenerRegistro {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             diaAgenda = (DiaAgenda) getArguments().getSerializable(ARG_PARAM1);
+            myCalendar = (Calendar) getArguments().getSerializable("calendar");
         }
     }
 
@@ -62,6 +66,7 @@ public class TurnoFragment extends Fragment implements OnClickListenerRegistro {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_turno, container, false);
         ButterKnife.bind(this, v);
+        fecha.setText(Utils.dateToString(myCalendar).replace("\n", " "));
         SpotsDialog.Builder sp = new SpotsDialog.Builder();
         sp.setContext(getContext()).setCancelable(false).setMessage("Loading...");
         dialog = sp.build();

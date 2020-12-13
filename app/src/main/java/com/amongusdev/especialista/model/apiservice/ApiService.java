@@ -2,6 +2,8 @@ package com.amongusdev.especialista.model.apiservice;
 
 import com.amongusdev.especialista.model.apiservice.bodies.CitaBody;
 import com.amongusdev.especialista.model.apiservice.bodies.ClienteBody;
+import com.amongusdev.especialista.model.apiservice.bodies.EspecialistaBody;
+import com.amongusdev.especialista.model.apiservice.bodies.EvolucionBody;
 import com.amongusdev.especialista.model.apiservice.bodies.GenericResponse;
 import com.amongusdev.especialista.model.apiservice.bodies.LoginBody;
 import com.amongusdev.especialista.model.entities.Agenda;
@@ -9,6 +11,7 @@ import com.amongusdev.especialista.model.entities.Cita;
 import com.amongusdev.especialista.model.entities.Especialista;
 import com.amongusdev.especialista.model.entities.Servicio;
 
+import java.util.Calendar;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,8 +27,8 @@ public interface ApiService {
     @GET("/servicio")
     Call<List<Servicio>> getServicios();
 
-    @GET("/cita/cliente/{cedula}")
-    Call<List<Cita>> getCitasCliente(@Path("cedula") String cedula);
+    @GET("/cita/especialista/{cedula}")
+    Call<List<Cita>> getCitasEspecialista(@Path("cedula") String cedula);
 
     @GET("/area/{id}/especialista")
     Call<List<Especialista>> getEspecialistas(@Path("id") int id);
@@ -51,6 +54,16 @@ public interface ApiService {
                                     @Query("anio") int anio,
                                     @Query("mes") int mes,
                                     @Query("turnos") String turno);
+
+    @PATCH("/especialista/{cedula}")
+    Call<GenericResponse> setDatosEspecialista(@Path("cedula") String cedula, @Body EspecialistaBody especialistaBody);
+
+    @GET("/especialista/{cedula}")
+    Call<Especialista> getEspecialista(@Path("cedula") String cedula);
+
+    @POST("historiaclinica/{cedula}/evolucion")
+    Call<GenericResponse> setEvolucion(@Path("cedula") String cedula, @Body EvolucionBody evolucionBody);
+
 
 
 

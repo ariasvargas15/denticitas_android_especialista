@@ -43,6 +43,7 @@ public class AgendaInteractor implements IAgenda.Interactor {
 
             @Override
             public void onFailure(Call<List<Agenda>> call, Throwable t) {
+                Log.e("problema", t.getLocalizedMessage());
                 presenter.setAgendas(new ArrayList<>());
                 Log.e("getAgendas", "Response failed");
             }

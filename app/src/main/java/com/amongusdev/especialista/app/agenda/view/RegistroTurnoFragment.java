@@ -69,6 +69,7 @@ public class RegistroTurnoFragment extends Fragment implements IRegistro.View {
         View v = inflater.inflate(R.layout.fragment_registro_turno, container, false);
         ButterKnife.bind(this, v);
         presenter = new RegistroPresenter(this);
+        fecha.setText(Utils.dateToString(myCalendar).replace("\n", " "));
         setAdapter();
         return v;
     }

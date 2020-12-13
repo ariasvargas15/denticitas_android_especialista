@@ -17,8 +17,8 @@ public class LoginBody implements Serializable {
     @SerializedName("password")
     @Expose
     private String password;
-    @SerializedName("tipo")
+    @SerializedName("rol")
     @Expose
-    private String tipo;
+    private String rol;
 
 }

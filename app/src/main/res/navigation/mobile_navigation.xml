@@ -9,7 +9,7 @@
         android:id="@+id/nav_agenda"
         android:name="com.amongusdev.especialista.app.agenda.view.AgendaFragment"
         android:label="@string/menu_agendar"
-        tools:layout="@layout/fragment_agenda" >
+        tools:layout="@layout/fragment_agenda">
         <action
             android:id="@+id/action_nav_agendar_to_nav_turno"
             app:destination="@id/nav_turno" />
@@ -28,7 +28,7 @@
         android:id="@+id/nav_registrar_turno"
         android:name="com.amongusdev.especialista.app.agenda.view.RegistroTurnoFragment"
         android:label="@string/menu_registrar"
-        tools:layout="@layout/fragment_registro_turno"/>
+        tools:layout="@layout/fragment_registro_turno" />
 
 
     <fragment
@@ -41,12 +41,21 @@
         android:id="@+id/nav_turno"
         android:name="com.amongusdev.especialista.app.agenda.view.TurnoFragment"
         android:label="@string/menu_agendar"
-        tools:layout="@layout/fragment_turno"/>
+        tools:layout="@layout/fragment_turno" />
 
     <fragment
         android:id="@+id/nav_logout"
         android:name="com.amongusdev.especialista.app.auth.view.LogoutFragment"
-        tools:layout="@layout/fragment_blank"
-        />
+        tools:layout="@layout/fragment_blank" />
+
+    <fragment
+        android:id="@+id/nav_citas"
+        android:name="com.amongusdev.especialista.app.citas.view.CitasFragment"
+        tools:layout="@layout/fragment_citas" />
+
+    <fragment
+        android:id="@+id/nav_evolucion"
+        android:name="com.amongusdev.especialista.app.citas.view.EvolucionFragment"
+        tools:layout="@layout/fragment_evolucion" />
 
 </navigation>

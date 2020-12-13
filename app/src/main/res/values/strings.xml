@@ -54,4 +54,7 @@
     <string name="menu_agenda">Agenda</string>
     <string name="turnos_agendados">Turnos agendados</string>
     <string name="menu_registrar">Registrar</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="modify_button">Modificar</string>
+    <string name="mis_citas">Mis citas</string>
 </resources>
